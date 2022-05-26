@@ -1,11 +1,11 @@
 
 #include <string>
-#ifndef BM104_210757043_Proje1_Bahar_H
-#define BM104_210757043_Proje1_Bahar_H
-class BM104_210757043_Proje1_Bahar {
+#ifndef BM104__Proje1_Bahar_H
+#define BM104__Proje1_Bahar_H
+class BM104__Proje1_Bahar {
 public:
 	//Yapıcımız
-	BM104_210757043_Proje1_Bahar(int kacEleman, int altLimit, int ustLimit);
+	BM104__Proje1_Bahar(int kacEleman, int altLimit, int ustLimit);
 	//Tek public fonksiyonuzmuz
 	void OyunOyna();
 
