@@ -1,33 +1,23 @@
-/*
-* Göktay
-Bahçekapýlý
-210757043
-Bilgisayar mühendisliði ikinci öðretim
-Nesneye yönelik programlama / BM104
-BAHAR 2022
-BM104
-DENÝZ DAL
-*/
 
 #include <iostream>
-#include "BM104_210757043_Proje1_Bahar.h"
+#include "BM104__Proje1_Bahar.h"
 #include <cstdlib>
 #include <algorithm>
 #include <string>
 using namespace std;
-void BM104_210757043_Proje1_Bahar::RastgeleElemanAta()
+void BM104__Proje1_Bahar::RastgeleElemanAta()
 {
-	//Bu fonksiyonu bir defa kullanýcagýmýz icin bazi degiskenlerimize varsayýlan degerlerini atiyoruz
+	//Bu fonksiyonu bir defa kullanÃ½cagÃ½mÃ½z icin bazi degiskenlerimize varsayÃ½lan degerlerini atiyoruz
 	sayiDahaOnceBulunduMu = false;
 	kazandiMi = false;
 	bulunanSayilar = "";
 	kacSayiBulundu = 0;
-	//for dongusunde sayilar dizisine alt ve üst limit arasinda degerler atiyoruz
+	//for dongusunde sayilar dizisine alt ve Ã¼st limit arasinda degerler atiyoruz
 	for (int i = 0; i < kacEleman; i++)
 	{
 		sayilar[i] = (rand() % (ustLimit + 1 - altLimit)) + altLimit;
 	}
-	//for dongusunde sayilarString dizisine alt ve üst limit arasinda degerler atiyoruz
+	//for dongusunde sayilarString dizisine alt ve Ã¼st limit arasinda degerler atiyoruz
 
 	for (int i = 0; i < kacEleman; i++)
 	{
@@ -35,7 +25,7 @@ void BM104_210757043_Proje1_Bahar::RastgeleElemanAta()
 	}
 }
 
-bool BM104_210757043_Proje1_Bahar::DiziAramaKaydirma(int arananSayi)
+bool BM104__Proje1_Bahar::DiziAramaKaydirma(int arananSayi)
 {
 	//yedek diziler bulunan degerlerin yerini degistirirken lazim oluyor
 	int yedekDizi[20];
@@ -90,7 +80,7 @@ bool BM104_210757043_Proje1_Bahar::DiziAramaKaydirma(int arananSayi)
 	return donecekDeger;
 }
 
-void BM104_210757043_Proje1_Bahar::OyunDongu()
+void BM104__Proje1_Bahar::OyunDongu()
 {
 	//tahmin sayisi kadar donuyoruz
 	for (int i = 0; i < kacTahmin; i++)
@@ -108,7 +98,7 @@ void BM104_210757043_Proje1_Bahar::OyunDongu()
 	}
 }
 
-void BM104_210757043_Proje1_Bahar::Reorder(int A[], int n, int arananSayi)
+void BM104__Proje1_Bahar::Reorder(int A[], int n, int arananSayi)
 {
 	// k degiskeni bir sonra ki musait indexi tutuyor
 	int k = 0;
@@ -129,7 +119,7 @@ void BM104_210757043_Proje1_Bahar::Reorder(int A[], int n, int arananSayi)
 	}
 }
 //int reorderin aynisi
-void BM104_210757043_Proje1_Bahar::ReorderString(string A[], int n, string arananString)
+void BM104__Proje1_Bahar::ReorderString(string A[], int n, string arananString)
 {
 	// `k` stores the index of the next available position
 	int k = 0;
@@ -150,7 +140,7 @@ void BM104_210757043_Proje1_Bahar::ReorderString(string A[], int n, string arana
 	}
 }
 
-void BM104_210757043_Proje1_Bahar::OyunBastir(std::string basilacak[])
+void BM104__Proje1_Bahar::OyunBastir(std::string basilacak[])
 {
 	//yedek stringi X leri degistirirken lazim olacak
 	string yedekString[20];
@@ -159,7 +149,7 @@ void BM104_210757043_Proje1_Bahar::OyunBastir(std::string basilacak[])
 	{
 		yedekString[i] = basilacak[i];
 	}
-	//mesela 2 eleman bulunduysa 6-2=4 ilk 4 elemaný X yapýyoruz
+	//mesela 2 eleman bulunduysa 6-2=4 ilk 4 elemanÃ½ X yapÃ½yoruz
 	for (int i = 0; i < kacEleman - kacSayiBulundu; i++)
 	{
 		yedekString[i] = "X";
@@ -172,7 +162,7 @@ void BM104_210757043_Proje1_Bahar::OyunBastir(std::string basilacak[])
 	cout << endl;
 }
 //Yapicimizda oyuncudan aldigimiz verileri esitliyoruz
-BM104_210757043_Proje1_Bahar::BM104_210757043_Proje1_Bahar(int x, int y, int z)
+BM104__Proje1_Bahar::BM104__Proje1_Bahar(int x, int y, int z)
 {
 	kacEleman = x;
 	altLimit = y;
@@ -180,7 +170,7 @@ BM104_210757043_Proje1_Bahar::BM104_210757043_Proje1_Bahar(int x, int y, int z)
 	kacTahmin = x * 2;
 }
 
-void BM104_210757043_Proje1_Bahar::OyunOyna()
+void BM104__Proje1_Bahar::OyunOyna()
 {
 	RastgeleElemanAta();
 	OyunDongu();
