@@ -1,6 +1,6 @@
 
 #include <iostream>
-#include "BM104_210757043_Proje1_Bahar.h"
+#include "BM104__Proje1_Bahar.h"
 
 using namespace std;
 int main()
@@ -19,6 +19,6 @@ int main()
 	cout << "Ust Limit:";
 	cin >> ustLimit;
 	//classımızı olusturuyoruz
-	BM104_210757043_Proje1_Bahar nsn(kacEleman, altLimit, ustLimit);
+	BM104__Proje1_Bahar nsn(kacEleman, altLimit, ustLimit);
 	nsn.OyunOyna();
 }
